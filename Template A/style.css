@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    min-height: 800vh;
+    background-color: hsl(238, 100%, 12%);
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.section {
+    padding-block: 5rem 1rem;
+  
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+  
+.main {
+    overflow: hidden;
+ 
+}
+
+nav{
+    position: relative;
+    background-color: transparent;
+    box-shadow: 2px 0px 2px #ccc;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav li{
+    height: 65px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: 0.75s;
+}
+
+nav a:hover{
+    color: #cccccc86;
+}
+
+nav li:first-child{
+    margin-right: auto;
+    
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #cccccc0a;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.7s;
+}
+
+svg{
+    fill: #000;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+
+@media(max-width: 1018px){
+    .hideOnMobile{
+        display: none;
+    }
+
+    .sidebar{
+        transition: 0.75s ease-in;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+}
+
+.containerA{
+    position: relative;
+    row-gap: 3rem;
+    padding-top: 6rem;
+}
+
+.boxaData{
+    text-align: center;
+}
+
+.boxaData h2{
+    font-size: 45px;
+    color: #ccc;
+}
+
+.boxaData button{
+    margin-top: 15px;
+    display: inline-flex;
+    padding: 12px;
+    color: #ccc;
+    background: linear-gradient(90deg,
+    hsl(243, 96%, 54%),
+    hsl(296, 78%, 53%));
+    border: none;
+    transition: 0.7s;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 800;
+}
+
+.boxaData button:hover{
+    box-shadow: 0 8px 32px hsla(243, 100%, 54%, .4);
+}
+
+.boxaData input{
+    display: none;
+}
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(238, 100%, 6%, .5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.img-container{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imgEdit img{
+    width: 300px;
+    height: 300px;
+    transition: 0.7s;
+    
+}
